@@ -8,28 +8,24 @@ Gyro: L3GD20
 
 ## Connection
 Adafruit 9dof Accel & Gyro
-    VIN  -->   5 V
-    GND  -->   GND
-    SCL  -->   A5
-    SDA  -->   A4
+* VIN  -->   5 V
+* GND  -->   GND
+* SCL  -->   A5
+* SDA  -->   A4
 
 ## Calibration
 To calibrate the magnetometer I've used code snippets from Chris Holm and the calibrations Software Magneto.
 * Calibration Software [Magneto v1.2](https://sites.google.com/site/sailboatinstruments1/home)
-* Code by [Chris Holm]((https://forums.adafruit.com/viewtopic.php?f=8&t=136357&p=685932)) Jul 25, 2018
+* Code by [Chris Holm](https://forums.adafruit.com/viewtopic.php?f=8&t=136357&p=685932) Jul 25, 2018
 
 # Objectloader
 These modul (objectloader.py) was used to load a Wavefront object created by [Blender](https://www.blender.org/).
 It requires a *.obj format:
-    vertices:
-        v 1.000000 -1.000000 -1.000000
-    faces:
-        f 2//1 3//1 4//1
+* vertices: v 1.000000 -1.000000 -1.000000
+* faces: f 2//1 3//1 4//1
 
 # Live plot
 The 'imu_opengl_live_plot.py' script is used to rotate a 3D Wavefront object. The rotation dependes on the pitch, roll and yaw angle which will be measured by the IMU. 
-* Data coming from the IMU have to be in the following format:
-    pitch, roll, yaw
-    Example: -1.89,0.18,210.63
+* Data coming from the IMU have to be in the following format: pitch, roll, yaw (Example: -1.89,0.18,210.63)
 * As serial connection port COM4 and baudrate 115200 is used.
 * Maintain a good performace it could be necessary to commend out edges in function 'drawMyObject()' (line 73-78) or use an object with less vertices.

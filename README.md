@@ -21,8 +21,8 @@ To calibrate the magnetometer I've used code snippets from Chris Holm and the ca
 # Objectloader
 This modul (objectloader.py) is used to load a Wavefront object created by [Blender](https://www.blender.org/).
 It requires a *.obj format:
-> vertices: v 1.000000 -1.000000 -1.000000
-> faces: f 2//1 3//1 4//1
+* vertices: v 1.000000 -1.000000 -1.000000
+* faces: f 2//1 3//1 4//1
 
 # Live plot
 The 'imu_opengl_live_plot.py' script is used to rotate a 3D Wavefront object. The rotation dependes on the pitch, roll and yaw angle which will be measured by the IMU. 

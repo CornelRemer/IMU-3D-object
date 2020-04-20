@@ -97,8 +97,7 @@ class Objectloader:
     
 if __name__ == '__main__':
     filename = 'cube.obj'
-    # filename = 'Cylone.obj'
-    # filename = 'monkey.obj'
+    # filename = 'drone.obj'
 
     myobject = Objectloader(filename)
 

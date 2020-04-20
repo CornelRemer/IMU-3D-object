@@ -59,7 +59,7 @@ def Axis():
     glVertex3f(0.0, 0.0, 1.0)
     glEnd()
 
-def MyObject(vertices, faces, edges):
+def drawMyObject(vertices, faces, edges):
     """Create openGL object made from faces and edges"""
     # faces
     glBegin(GL_TRIANGLES)
@@ -69,7 +69,7 @@ def MyObject(vertices, faces, edges):
             glVertex3fv(vertices[vertex])
     glEnd()
 
-    edges
+    # edges
     glBegin(GL_LINES)
     for edge in edges:
         glColor3f(1.0,1.0,1.0)
@@ -122,7 +122,7 @@ def main(object_):
             # clear frames
             glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT)
             
-            MyObject(vertices, faces, edges)
+            drawMyObject(vertices, faces, edges)
             Axis()
 
             pygame.display.flip()
